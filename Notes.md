@@ -2,7 +2,7 @@
 
 ## What is Machine Learning?
 <!--<hr>-->
-Machine Learning is a subdomain of Computer Science that focuses on Algorithms which helps a computer to learn from data without explicit Programming.
+Machine Learning is a subdomain of Computer Science that focuses on Algorithms which help a computer learn from data without explicit Programming.
 
 ## AI vs ML vs DS
 <!--<hr>-->
@@ -46,7 +46,7 @@ Input n -----> |___________|
     - Ordinal Data (inherent order)
         - Give a number
 
-- <b>Quantitative:</b> numerical valued data (could be discrete or continuous). Ex: Length, Tempetature
+- <b>Quantitative:</b> numerical valued data (could be discrete or continuous). Ex: Length, Temperature
     - Can be continuous or discrete
 
 ### <b>Types of Predictions</b>
@@ -77,7 +77,34 @@ Input n -----> |___________|
 
 FV = Feature Vector
 ```
-We break our dataset into three categories:
+
+<b>Training the Model:</b> Figuring out the difference between the predicted value from the model and the actual output so that we achieve a higher accuracy in prediction is called training.
+
+We generally do not feed the entire dataset into training the model. This is because we want to make sure that our model performs well on new data which we haven't seen. Therefore, we break our dataset into three categories:
 - Training Dataset
 - Validation Dataset
 - Testing Dataset
+
+We feed the training dataset to the model and figure out a prediction. From the obtained prediction, we find the difference from the actual outputs. This difference is called <code>Loss</code>(The smaller the loss, the better the model). Making adjustments from the obtained Loss is called training of the dataset.
+
+The validation set is used as a reality check during/after training to ensure the model can handle unseen data. We calculate the Loss, but the feedback loop is not run in this case, i.e., we do not train data here.
+From here, we check the losses and choose the model with the least loss.
+
+The test set is used to check how generalizable the final chosen model is. The output of this step is the <b>Final Reported Performance!</b>
+
+- <b>Loss</b> is the difference between the model's prediction and the actual label.
+  - L1 Loss
+  <pre>
+  <code>loss = &Sigma;(|y<sub>real</sub> - y<sub>predicted</sub>|)</code>
+  </pre>
+  - L2 Loss
+  <pre>
+  <code>loss = &Sigma;((y<sub>real</sub> - y<sub>predicted</sub>)<sup>2</sup>)</code>
+  </pre>
+  - Binary Cross Entropy Loss
+    - Loss decreases as the performance gets better
+
+<img src="https://miro.medium.com/v2/da:true/resize:fit:1200/1*bM2txQ6caL4AKiN19oH5bQ.gif" width=600 height=450 />
+
+### Metrics of Performance
+- <b>Accuracy</b>
