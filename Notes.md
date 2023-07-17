@@ -18,7 +18,7 @@ All fields overlap! All may use ML!
 ## Types of Machine Learning
 <!--<hr>-->
 
-- <b>Supervised Learning:</b> uses labelled inputs (meaning the input has a corresponding output label) to train models and learn outputs
+- <b>Supervised Learning:</b> uses labeled inputs (meaning the input has a corresponding output label) to train models and learn outputs
 
 - <b>Unsupervised Learning:</b> uses unlabeled data to learn about patterns in data
 
